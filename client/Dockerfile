@@ -6,3 +6,6 @@ COPY . .
 RUN npm run build
 EXPOSE 3000
 CMD ["npm", "start"]
+ARG MONGO_URI
+ENV MONGO_URI=$MONGO_URI
+RUN npm run build
